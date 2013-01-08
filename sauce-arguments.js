@@ -1,3 +1,4 @@
+//----- Link file with driver to launch web driver for different environments ---------
 var webdriver = require('wd')
   , assert = require('assert');
 var login = require('./lib/login.js');
