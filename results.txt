@@ -388,3 +388,60 @@ DELETE:/session/:sessionID
 
 Ending your web drivage..
 
+
+-----Script run at: 01/08/2013 14:48:13 PM-----
+
+Driving the web on session: e68d2f14b1c546f2a09091277afd967a
+
+
+-----Script run at: 01/08/2013 14:49:02 PM-----
+
+Driving the web on session: 2a00715044b94fe684ff5005087e39ff
+
+--*****Creating a New Contact*****--
+--Site loading failed or took more than expected time--
+--contact saved--
+--*****Reading a Contact*****--
+--Contact Heading verified--
+--PASS: First name verified--
+--FAIL: Middle name incorrect--
+--PASS: Last name verified--
+--PASS: Address Line verified--
+--PASS: Job title Verified--
+--PASS: Email verified--
+--PASS: Phone No. verified--
+--PASS: Charecteristic verified--
+--PASS: Contact notes verified--
+--PASS: Contact account verified--
+--PASS: Contact owner verified--
+--***** Updating the contact *****--
+
+-----Script run at: 01/08/2013 16:26:38 PM-----
+
+Driving the web on session: 50266601efa84e68b9a64aaeb98b009d
+
+--Site loading failed or took more than expected time--
+--*****Creating a New Contact*****--
+--contact saved--
+--*****Reading a Contact*****--
+--Contact Heading verified--
+--PASS: First name verified--
+--FAIL: Middle name incorrect--
+--PASS: Last name verified--
+--PASS: Address Line verified--
+--PASS: Job title Verified--
+--PASS: Email verified--
+--PASS: Phone No. verified--
+--PASS: Charecteristic verified--
+--PASS: Contact notes verified--
+--PASS: Contact account verified--
+--PASS: Contact owner verified--
+--***** Updating the contact *****--
+--***** Verifying the contact Update*****--
+--Opening the contact For verification--
+--Contact updated with new middle name--
+
+-----Script run at: 01/08/2013 16:29:28 PM-----
+
+Ending your web drivage..
+

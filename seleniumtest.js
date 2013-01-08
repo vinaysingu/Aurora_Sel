@@ -1,3 +1,4 @@
+//------- This is the main executable file to run the selenium scripts -----
 var test = require('./sauce-arguments.js');
 var input = require('./lib/utils.js');
 var browsername = process.argv[2];
