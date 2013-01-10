@@ -5,6 +5,7 @@ var login = require('./lib/login.js');
 var createContact_FFnC = require('./lib/createContactForFFnC.js');
 var createContact_Android = require('./lib/createContactForAndroid.js');
 var createContact_FFonWin8 = require('./lib/createContactForFFonWin8.js');
+var createContact_Iphone = require('./lib/createContactForIphone.js');
 var readContact_Iphone = require('./lib/readContactForIphone.js');
 var readContact_FFnC = require('./lib/readContactForFFnC.js');
 var readContact_Android = require('./lib/readContactForAndroid.js');
@@ -114,7 +115,7 @@ else if((osname === "Linux") || (osname === "Mac 10.6") || (osname === "Mac 10.8
 	else if((browsername === "iphone") || (browsername === "ipad"))
 	{
 	login.login(sldriver, caps, function(sldriver){
-	createContact_Android.createContact(sldriver,function(sldriver){
+	createContact_Iphone.createContact(sldriver,function(sldriver){
 	readContact_Iphone.readContact(sldriver);
 	});
 	});
