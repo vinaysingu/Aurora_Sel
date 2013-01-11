@@ -15,8 +15,8 @@ var time = require('./lib/utils.js');
 var sldriver = webdriver.remote(
   "ondemand.saucelabs.com" 
   , 80
-  , "ramyareddy" //--- Enter sauce labs account username here
-  , "29ada6ba-d9c7-4fc7-952a-5abd3137d1ee" //--- Enter sauce labs account access key here
+  , login.data.suname 
+  , login.data.sakey
 );
 var browserdriver = webdriver.remote();
 
