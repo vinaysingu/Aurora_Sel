@@ -12,6 +12,8 @@ $ node seleniumtest <browsername> <OS name> <browser version>
 
 ex: node seleniumtest safari "Mac 10.6" 5
 
+Note: Please rename the 'loginDataSample.js' file in the lib folder to 'loginData.js' and add the login credentials for xTuple and Saucelabs accounts
+
 
 
 
