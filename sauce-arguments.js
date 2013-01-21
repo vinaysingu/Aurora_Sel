@@ -2,6 +2,7 @@
 var webdriver = require('wd')
   , assert = require('assert');
 var login = require('./lib/login.js');
+var loginData = require('./lib/loginData.js');
 var createContact_FFnC = require('./lib/createContactForFFnC.js');
 var createContact_Android = require('./lib/createContactForAndroid.js');
 var createContact_FFonWin8 = require('./lib/createContactForFFonWin8.js');
@@ -15,8 +16,8 @@ var time = require('./lib/utils.js');
 var sldriver = webdriver.remote(
   "ondemand.saucelabs.com" 
   , 80
-  , login.data.suname 
-  , login.data.sakey
+  , loginData.data.suname 
+  , loginData.data.sakey
 );
 var browserdriver = webdriver.remote();
 
@@ -71,11 +72,12 @@ if((osname === "Windows XP")||( osname === "Windows 7") || (osname === "Ubuntu")
 	caps.platform = 'ANY';
 	if((browsername === "firefox") || (browsername === "chrome"))
 	{
+	
 	login.login(browserdriver, caps, function(browserdriver){
-	createContact_FFnC.createContact(browserdriver,function(browserdriver){
+	createContact_FFnC.createContact(browserdriver, function(browserdriver){
 	readContact_FFnC.readContact(browserdriver);
-	});
-	});
+	})
+	})
 	}
 }
 else if((osname === "Linux") || (osname === "Mac 10.6") || (osname === "Mac 10.8") || (osname == "Windows 8"))
