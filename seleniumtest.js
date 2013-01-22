@@ -16,7 +16,9 @@ regexp:true, undef:true, strict:true, trailing:true, white:true */
     j,
     stdin,
     requestVersion,
-    verifyCombination;
+    verifyCombination,
+    testIfValid,
+    verifyAndTest;
 
   requestVersion = function (callback) {
     var stdin = process.stdin;
@@ -76,6 +78,15 @@ regexp:true, undef:true, strict:true, trailing:true, white:true */
   };
 
   try {
+    testIfValid = function (valid) {
+      if (valid) {
+        test.starttest(browsername, osname, version);
+      }
+    };
+    verifyAndTest = function (version) {
+      verifyCombination(browsername, osname, testIfValid);
+    };
+
     for (i = 0; i < availbrowsers.length; i = i + 1) {
       if (availbrowsers[i] === browsername) {
         bflag = true; //-- flag for valid browser name
@@ -84,19 +95,9 @@ regexp:true, undef:true, strict:true, trailing:true, white:true */
             oflag = true; //---flag for valid osname
             if (((osname === "Mac 10.6") || (osname === "Mac 10.8") || (osname === "Linux")) && ((typeof version) === 'undefined')) {
               console.log('Please enter the browser version: ');
-              input.input(function (version) {
-                verifyCombination(browsername, osname, function (valid) {
-                  if (valid) {
-                    test.starttest(browsername, osname, version);
-                  }
-                });
-              });
+              input.input(verifyAndTest);
             } else {
-              verifyCombination(browsername, osname, function (valid) {
-                if (valid) {
-                  test.starttest(browsername, osname, version);
-                }
-              });
+              verifyCombination(browsername, osname, testIfValid);
             }
             break;
           }
